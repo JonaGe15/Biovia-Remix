@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#4edea3", "surface-container": "#EAE6DE", "primary-fixed": "#2E6F40", "background": "#F7F5F0", "error": "#D33F36", "primary-container": "#2E6F40", "surface-container-high": "#E4DFD5", "primary": "#2E6F40", "error-container": "#FDEAE8", "on-secondary-fixed-variant": "#2F4A39", "secondary-container": "#4D7C5F", "tertiary-container": "#C59B27", "surface-dim": "#ECE8DF", "outline": "#8C968E", "outline-variant": "#D8D2C7", "inverse-surface": "#1A231E", "on-primary-fixed-variant": "#15351E", "on-tertiary-container": "#FFFFFF", "surface-container-low": "#FAF8F5", "surface-container-highest": "#DDD8CE", "surface-container-lowest": "#FFFFFF", "on-background": "#1A231E", "on-secondary-fixed": "#122A1E", "primary-fixed-dim": "#3B8650", "on-primary": "#FFFFFF", "surface-bright": "#FFFFFF", "on-error-container": "#7A1813", "tertiary": "#846B23", "on-tertiary-fixed-variant": "#4E3E11", "on-secondary": "#FFFFFF", "on-surface": "#1A231E", "inverse-on-surface": "#F7F5F0", "on-primary-fixed": "#FFFFFF", "surface": "#F7F5F0", "surface-tint": "#2E6F40", "on-tertiary-fixed": "#FFFFFF", "on-secondary-container": "#FFFFFF", "on-primary-container": "#FFFFFF", "tertiary-fixed-dim": "#A3862A", "secondary-fixed-dim": "#649477", "tertiary-fixed": "#D4A934", "secondary-fixed": "#4D7C5F", "secondary": "#4D7C5F", "surface-variant": "#EFECE6", "on-tertiary": "#FFFFFF", "on-surface-variant": "#4A5D52", "on-error": "#FFFFFF" }, "borderRadius": { "DEFAULT": "0.375rem", "lg": "0.625rem", "xl": "0.875rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "gutter": "1.5rem", "margin-lg": "3rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin": "2rem", "margin-sm": "1rem", "space-lg": "1.5rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-xl": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "label-md": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-sm": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary/20 selection:text-primary"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest/85 backdrop-blur-2xl z-50 flex flex-col justify-between p-space-md shadow-[4px_0_30px_rgba(26,35,30,0.06)] border-r border-white/80"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><img alt="BioVía Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XETsaGb2tE3sN_6JbOYaVbaq9EnAEpE264nk-yjmIvP5ekMHOOPpGJGI4uiBrrNnNQ0tSQfk9ylAUUEOkl1u8iVgsutAkaDFh14eRzmROG7M9b09zfttVDufXM6I2M46SRE51_73kMNLDuFjMSifjnvfoIVl3av4ApUL36hiSbNoZjB52I4MxGUdRtNGOoKdwMO1iDIBsXuGth7OLCLCrwzNkSa6YStYXAkC5fJJEi"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight leading-none font-bold">BioVía</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase mt-0.5">Impacto Ecológico</span></div></div><div class="flex items-center gap-space-xs bg-surface-container-variant/70 border border-outline-variant/60 px-space-sm py-space-xs rounded-full shadow-inner"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="w-full bg-transparent border-0 font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none" placeholder="Filtrar tramo, especie o cuenca..." type="text"/></div><nav class="flex flex-col gap-1.5 mt-space-xs" data-active-classes="bg-primary text-white font-headline-sm font-semibold rounded-xl shadow-sm"><a class="flex items-center gap-3 px-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analisis-conectividad" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">hub</span><span>Conectividad Vial</span></a><a class="flex items-center gap-3 px-space-sm py-2.5 rounded-xl font-body-md text-body-md bg-primary text-white shadow-sm transition-all" data-path="simulacion-impacto" href="#"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span class="font-semibold">Simulación de Impacto</span></a><a class="flex items-center gap-3 px-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="monitoreo-biodiversidad" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">forest</span><span>Biodiversidad &amp; Fauna</span></a><a class="flex items-center gap-3 px-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="mitigacion-pasos-fauna" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">alt_route</span><span>Pasos de Fauna &amp; Obras</span></a><a class="flex items-center gap-3 px-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="informes-exportacion" href="#"><span class="material-symbols-outlined text-[20px] text-secondary">assessment</span><span>Informes &amp; Cumplimiento</span></a></nav><div class="flex flex-col gap-2 pt-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-xs">Capas Territoriales</span><div class="flex flex-col gap-1.5 bg-surface-container-variant/60 border border-outline-variant/60 p-space-xs rounded-xl"><label class="flex items-center justify-between px-space-xs py-1 cursor-pointer group"><span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-primary/20"></span>Áreas Protegidas</span><input checked="" class="accent-primary rounded cursor-pointer" type="checkbox"/></label><label class="flex items-center justify-between px-space-xs py-1 cursor-pointer group"><span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-secondary/20"></span>Corredores Biológicos</span><input checked="" class="accent-secondary rounded cursor-pointer" type="checkbox"/></label><label class="flex items-center justify-between px-space-xs py-1 cursor-pointer group"><span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-[#3B82A6] ring-2 ring-[#3B82A6]/20"></span>Cuencas Hidrográficas</span><input checked="" class="accent-[#3B82A6] rounded cursor-pointer" type="checkbox"/></label><label class="flex items-center justify-between px-space-xs py-1 cursor-pointer group"><span class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface"><span class="w-2.5 h-2.5 rounded-full bg-outline ring-2 ring-outline/20"></span>Zonas Urbanas</span><input class="accent-outline rounded cursor-pointer" type="checkbox"/></label></div></div></div><div class="flex flex-col gap-space-xs pt-space-xs bg-surface-container-variant/70 border border-outline-variant/60 p-space-xs rounded-xl"><div class="flex items-center justify-between px-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Índice Fragmentación</span><span class="font-label-md text-label-md text-primary font-bold">-14.2%</span></div><div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden shadow-inner"><div class="bg-primary h-full rounded-full w-[68%] transition-all duration-500"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/80 backdrop-blur-2xl z-40 flex items-center justify-between px-gutter shadow-[0_2px_16px_rgba(26,35,30,0.04)] border-b border-white/80"><div class="flex items-center gap-gutter-sm"><div class="flex items-center gap-2"><span class="font-body-sm text-body-sm text-on-surface-variant">Proyecto:</span><span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Corredor BioVía Andino - Tramo N-14</span></div><div class="h-4 w-px bg-outline-variant"></div><div class="flex items-center gap-2"><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 font-label-sm text-label-sm font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>Simulación Activa</span><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/15 text-secondary border border-secondary/25 font-label-sm text-label-sm font-medium"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>Cálculo en Tiempo Real</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5 bg-surface-container-variant/80 border border-outline-variant/70 p-1 rounded-full shadow-inner"><button class="p-1.5 rounded-full text-on-surface-variant hover:bg-white hover:text-on-surface hover:shadow-xs transition-all" title="Exportar GeoJSON"><span class="material-symbols-outlined text-[18px]">download</span></button><button class="p-1.5 rounded-full text-on-surface-variant hover:bg-white hover:text-on-surface hover:shadow-xs transition-all" title="Compartir Escenario"><span class="material-symbols-outlined text-[18px]">share</span></button><button class="p-1.5 rounded-full text-on-surface-variant hover:bg-white hover:text-on-surface hover:shadow-xs transition-all" title="Ajustes de Renderizado"><span class="material-symbols-outlined text-[18px]">tune</span></button></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-xs pl-1"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Dra. Marcela Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-1">Ecol. Espacial Senior</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm ring-1 ring-primary/40 border border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaS42snjhWUeCvuGc-3UV8RHnP5PPu21x29gEyZHi2vf0YhQ_YjSowRiYo2RgTndc702xGq9U_BL9vE-V_8KsP87ncks9-66Ahe5ZfjXx2IVg4uhMVrRZHWU6uWQdKp3wFgsYqngxoeL6P0whDf3SyWztwTwGhXwpF1bwRseGwyDgAKNGmsvEdRAbFBb1MJBli8IwDlbD2RAmV9C5pm6mmnatWmubRtAFs_xOefVk"/></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full text-on-surface select-none">
+<!-- Interactive Viewport Layout -->
+<div class="relative w-full h-[calc(100vh-4rem)] flex overflow-hidden">
+<!-- LEFT & CENTER: GIS TOPOGRAPHIC CANVAS & OVERLAYS -->
+<div class="relative flex-1 h-full bg-[#F4F1EA] overflow-hidden">
+<!-- Topographic Vector GIS Simulation Layer (Warm Safari / Light Sand palette) -->
+<svg class="absolute inset-0 w-full h-full object-cover cursor-crosshair" id="gisCanvas" preserveaspectratio="none" viewbox="0 0 1100 850" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Gradients & Filters Light Mode -->
+<radialgradient cx="35%" cy="32%" id="canopyGlow1" r="45%">
+<stop offset="0%" stop-color="#4D7C5F" stop-opacity="0.32"></stop>
+<stop offset="65%" stop-color="#3B8650" stop-opacity="0.14"></stop>
+<stop offset="100%" stop-color="#F4F1EA" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="72%" cy="68%" id="canopyGlow2" r="40%">
+<stop offset="0%" stop-color="#2E6F40" stop-opacity="0.25"></stop>
+<stop offset="70%" stop-color="#4D7C5F" stop-opacity="0.10"></stop>
+<stop offset="100%" stop-color="#F4F1EA" stop-opacity="0"></stop>
+</radialgradient>
+<lineargradient id="riverGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3B82A6" stop-opacity="0.75"></stop>
+<stop offset="50%" stop-color="#2563EB" stop-opacity="0.65"></stop>
+<stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="roadGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#2E6F40"></stop>
+<stop offset="50%" stop-color="#15803D"></stop>
+<stop offset="100%" stop-color="#4D7C5F"></stop>
+</lineargradient>
+<filter height="140%" id="liquidGlow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="5"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<filter height="160%" id="ecoductoGlow" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="4"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<!-- Pattern for Protected Biological Corridor (Warm Sage & Olive hatch) -->
+<pattern height="24" id="bioHatch" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="24">
+<line stroke="#2E6F40" stroke-opacity="0.22" stroke-width="1.2" x1="0" x2="0" y1="0" y2="24"></line>
+</pattern>
+</defs>
+<!-- Topographic Background Tint Layers -->
+<rect fill="#F4F1EA" height="850" width="1100"></rect>
+<!-- Basemap Contour Elevation Lines (Soft Clay/Sienna Topo) -->
+<g fill="none" stroke="#D3C9B8" stroke-opacity="0.85" stroke-width="1">
+<path d="M-50,150 C180,80 320,260 550,190 C780,120 950,220 1150,160"></path>
+<path d="M-50,230 C150,170 340,340 600,280 C840,220 980,310 1150,260"></path>
+<path d="M-50,320 C220,270 410,430 680,360 C900,300 1020,410 1150,370"></path>
+<path d="M-50,420 C190,390 380,520 630,470 C880,410 990,510 1150,480"></path>
+<path d="M-50,540 C170,490 350,630 660,570 C920,520 1030,620 1150,600"></path>
+<path d="M-50,660 C240,610 430,730 720,680 C950,640 1040,730 1150,710"></path>
+<path d="M-50,770 C210,740 460,820 780,780 C980,760 1080,830 1150,820"></path>
+</g>
+<!-- Biological Reserves & Canopies (Sage green with hatch & clean border) -->
+<path d="M90,70 C240,40 430,120 480,260 C510,380 400,480 270,460 C120,440 60,320 50,190 Z" fill="url(#canopyGlow1)" stroke="#4D7C5F" stroke-dasharray="4,3" stroke-opacity="0.4" stroke-width="1.5"></path>
+<path d="M90,70 C240,40 430,120 480,260 C510,380 400,480 270,460 C120,440 60,320 50,190 Z" fill="url(#bioHatch)"></path>
+<path d="M580,420 C720,380 890,440 960,560 C1010,680 930,810 780,820 C640,830 540,730 520,600 C510,510 540,440 580,420 Z" fill="url(#canopyGlow2)" stroke="#2E6F40" stroke-dasharray="4,3" stroke-opacity="0.4" stroke-width="1.5"></path>
+<path d="M580,420 C720,380 890,440 960,560 C1010,680 930,810 780,820 C640,830 540,730 520,600 C510,510 540,440 580,420 Z" fill="url(#bioHatch)"></path>
+<!-- Sinuoso Río Quebrada Honda & Humedales -->
+<g id="cuencasHidricas">
+<path d="M120,-20 C180,140 240,260 210,380 C180,490 280,590 380,660 C480,730 620,770 710,880" fill="none" opacity="0.85" stroke="url(#riverGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.5"></path>
+<path d="M210,380 C260,410 330,420 370,460 C420,510 440,580 460,650" fill="none" opacity="0.75" stroke="#3B82A6" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Wetland Pods -->
+<ellipse cx="230" cy="420" fill="#3B82A6" fill-opacity="0.25" rx="35" ry="18" stroke="#3B82A6" stroke-opacity="0.4" stroke-width="1"></ellipse>
+<ellipse cx="440" cy="560" fill="#3B82A6" fill-opacity="0.22" rx="42" ry="24" stroke="#3B82A6" stroke-opacity="0.4" stroke-width="1"></ellipse>
+</g>
+<!-- Red Vial Secundaria Existente (Líneas Tenues) -->
+<path d="M-20,410 C140,430 260,520 400,560 C540,600 680,620 1120,640" fill="none" opacity="0.6" stroke="#9A9386" stroke-dasharray="6,4" stroke-width="2"></path>
+<!-- PROPOSED ROAD ALIGNMENT (B-204) -->
+<!-- 500m Buffer Zone (Refined Emerald/Sage translucent halo) -->
+<path d="M140,620 Q310,540 450,420 T760,330 T960,210" fill="none" id="roadBufferZone" opacity="0.22" stroke="#4D7C5F" stroke-linecap="round" stroke-linejoin="round" stroke-width="52"></path>
+<path d="M140,620 Q310,540 450,420 T760,330 T960,210" fill="none" opacity="0.32" stroke="#C59B27" stroke-dasharray="8,8" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></path>
+<!-- Main Road Geometric Spine -->
+<path d="M140,620 Q310,540 450,420 T760,330 T960,210" fill="none" id="mainRoadVector" stroke="url(#roadGrad)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<path d="M140,620 Q310,540 450,420 T760,330 T960,210" fill="none" opacity="0.9" stroke="#FFFFFF" stroke-dasharray="8,6" stroke-width="1.5"></path>
+<!-- SUGGESTED WILDLIFE CROSSINGS (ECODUCTOS) -->
+<!-- Ecoducto 1: Km 6.2 (Corredor Oso de Anteojos / Tremarctos) -->
+<g class="cursor-pointer group" id="ecoducto1" transform="translate(450, 420)">
+<circle class="animate-ping" cx="0" cy="0" fill="#2E6F40" fill-opacity="0.2" r="18"></circle>
+<rect fill="#2E6F40" height="15" rx="4" stroke="#FFFFFF" stroke-width="1.5" width="30" x="-15" y="-7.5"></rect>
+<line stroke="#FFFFFF" stroke-width="1.5" x1="-8" x2="-8" y1="-7.5" y2="7.5"></line>
+<line stroke="#FFFFFF" stroke-width="1.5" x1="0" x2="0" y1="-7.5" y2="7.5"></line>
+<line stroke="#FFFFFF" stroke-width="1.5" x1="8" x2="8" y1="-7.5" y2="7.5"></line>
+<rect fill="#FAF8F5" fill-opacity="0.92" height="16" rx="4" stroke="#D8D2C7" stroke-width="0.8" width="130" x="-65" y="-27"></rect>
+<text class="font-label-sm text-[10px] tracking-wider font-bold" fill="#1A231E" text-anchor="middle" x="0" y="-15">ECODUCTO A (Km 6.2)</text>
+</g>
+<!-- Ecoducto 2: Km 11.4 (Paso Quebrada Honda & Anfibios) -->
+<g class="cursor-pointer group" id="ecoducto2" transform="translate(760, 330)">
+<circle cx="0" cy="0" fill="#4D7C5F" fill-opacity="0.25" r="14"></circle>
+<rect fill="#4D7C5F" height="13" rx="3.5" stroke="#FFFFFF" stroke-width="1.5" width="26" x="-13" y="-6.5"></rect>
+<line stroke="#FFFFFF" stroke-width="1.2" x1="-5" x2="-5" y1="-6.5" y2="6.5"></line>
+<line stroke="#FFFFFF" stroke-width="1.2" x1="5" x2="5" y1="-6.5" y2="6.5"></line>
+<rect fill="#FAF8F5" fill-opacity="0.92" height="16" rx="4" stroke="#D8D2C7" stroke-width="0.8" width="134" x="-67" y="-25"></rect>
+<text class="font-label-sm text-[10px] tracking-wider font-bold" fill="#1A231E" text-anchor="middle" x="0" y="-13">ECODUCTO B (Km 11.4)</text>
+</g>
+<!-- Interactive Drag Nodes (Waypoints) -->
+<!-- Nodo A -->
+<g class="cursor-pointer" transform="translate(140, 620)">
+<circle cx="0" cy="0" fill="#FAF8F5" r="9" stroke="#2E6F40" stroke-width="3"></circle>
+<circle cx="0" cy="0" fill="#2E6F40" r="3.5"></circle>
+<text class="font-label-md text-label-md font-bold" fill="#1A231E" x="-16" y="24">Nodo A (Inicio)</text>
+</g>
+<!-- Nodo B -->
+<g class="cursor-pointer" transform="translate(365, 490)">
+<circle cx="0" cy="0" fill="#FAF8F5" r="7" stroke="#4D7C5F" stroke-width="2.5"></circle>
+<circle cx="0" cy="0" fill="#2E6F40" r="2.5"></circle>
+<text class="font-label-sm text-label-sm font-semibold" fill="#4A5D52" x="12" y="5">Nodo B</text>
+</g>
+<!-- Nodo C -->
+<g class="cursor-pointer" transform="translate(620, 360)">
+<circle cx="0" cy="0" fill="#FAF8F5" r="7" stroke="#4D7C5F" stroke-width="2.5"></circle>
+<circle cx="0" cy="0" fill="#2E6F40" r="2.5"></circle>
+<text class="font-label-sm text-label-sm font-semibold" fill="#4A5D52" x="12" y="5">Nodo C</text>
+</g>
+<!-- Nodo D -->
+<g class="cursor-pointer" transform="translate(960, 210)">
+<circle cx="0" cy="0" fill="#FAF8F5" r="9" stroke="#2E6F40" stroke-width="3"></circle>
+<circle cx="0" cy="0" fill="#2E6F40" r="3.5"></circle>
+<text class="font-label-md text-label-md font-bold" fill="#1A231E" x="-24" y="-16">Nodo D (Destino)</text>
+</g>
+<!-- Segment Metrics Micro-Tag Overlay on Canvas -->
+<g transform="translate(240, 520)">
+<rect fill="#FFFFFF" fill-opacity="0.9" height="28" rx="14" stroke="#D8D2C7" stroke-width="1" width="138" x="0" y="0"></rect>
+<text class="font-label-sm text-[11px] font-semibold" fill="#2E6F40" text-anchor="middle" x="69" y="18">Sec. 1 • L: 4.8 km | Pend: 3.1%</text>
+</g>
+<g transform="translate(800, 275)">
+<rect fill="#FDEAE8" fill-opacity="0.95" height="28" rx="14" stroke="#F5C2BC" stroke-width="1" width="154" x="0" y="0"></rect>
+<text class="font-label-sm text-[11px] font-bold" fill="#B91C1C" text-anchor="middle" x="77" y="18">! Zona Crítica • Desmonte: 14 ha</text>
+</g>
+</svg>
+<!-- FLOATING TOP TOOLBAR: Safari Chic Glass Tools & Layer Selector -->
+<div class="absolute top-space-md left-space-md right-space-md flex flex-wrap items-center justify-between gap-3 pointer-events-none z-30">
+<!-- Tool Selection Pod -->
+<div class="pointer-events-auto flex items-center gap-1.5 p-1.5 rounded-full bg-white/85 backdrop-blur-2xl shadow-[0_6px_24px_rgba(26,35,30,0.08)] border border-white/90">
+<button class="flex items-center justify-center w-9 h-9 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="toolPan" title="Mano / Desplazar">
+<span class="material-symbols-outlined text-[19px]">pan_tool</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary text-white font-label-md text-label-md font-semibold shadow-[0_2px_12px_rgba(46,111,64,0.3)] transition-all" id="toolDraw" title="Trazar Carretera Activa">
+<span class="material-symbols-outlined text-[18px]">timeline</span>
+<span>Trazar Eje B-204</span>
+</button>
+<button class="flex items-center justify-center w-9 h-9 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="toolNode" title="Añadir Punto de Inflexión">
+<span class="material-symbols-outlined text-[19px]">add_location_alt</span>
+</button>
+<div class="h-5 w-px bg-outline-variant mx-0.5"></div>
+<!-- Radio de Influencia Buffer Slider Pill -->
+<div class="flex items-center gap-2 px-3 py-1 bg-surface-container-variant/75 rounded-full border border-outline-variant/60">
+<span class="material-symbols-outlined text-primary text-[17px]">radar</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Buffer: <strong class="text-primary font-semibold" id="bufferDisplay">500m</strong></span>
+<input class="w-16 h-1 accent-primary bg-outline-variant rounded-lg cursor-pointer" id="bufferRange" max="1500" min="100" step="50" type="range" value="500"/>
+</div>
+<div class="h-5 w-px bg-outline-variant mx-0.5"></div>
+<button class="flex items-center justify-center w-8 h-8 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="toolUndo" title="Deshacer">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</button>
+<button class="flex items-center justify-center w-8 h-8 rounded-full text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-all" id="toolEraser" title="Limpiar Tramo">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+</button>
+</div>
+<!-- GIS Layer Switcher Pill -->
+<div class="pointer-events-auto flex items-center gap-1 p-1 rounded-full bg-white/85 backdrop-blur-2xl shadow-[0_6px_24px_rgba(26,35,30,0.08)] border border-white/90">
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">Satélite</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary text-white font-semibold shadow-xs">Topográfico GIS</button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-secondary font-medium hover:bg-surface-container transition-all flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Bio-Capas ON
+          </button>
+<button class="px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all">Sensibilidad</button>
+</div>
+</div>
+<!-- FLOATING ROAD METRIC BANNER (Top-Left under toolbar) -->
+<div class="absolute top-20 left-space-md z-20 pointer-events-auto">
+<div class="p-space-sm rounded-xl bg-white/90 backdrop-blur-xl shadow-[0_8px_30px_rgba(26,35,30,0.08)] border border-white/90 flex items-center gap-space-md">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">conversion_path</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-medium">Traza Activa</span>
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-semibold">Conexión B-204</span>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Longitud</span>
+<span class="font-label-lg text-label-lg text-primary font-bold">14.8 km</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Pendiente</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">4.2% prom.</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Desmonte</span>
+<span class="font-label-lg text-label-lg text-error font-semibold">28.4 ha</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FLOATING BOTTOM-LEFT TELEMETRY POD & CONTROLS -->
+<div class="absolute bottom-space-md left-space-md z-20 flex flex-col gap-2.5 pointer-events-none">
+<!-- Elevation Profile & Coordinates Card -->
+<div class="pointer-events-auto w-80 p-space-sm rounded-2xl bg-white/90 backdrop-blur-2xl shadow-[0_12px_32px_rgba(26,35,30,0.08)] border border-white/90">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">show_chart</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wide">Perfil Altimétrico (Z)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">320m → 680m s.n.m.</span>
+</div>
+<!-- Elevation Profile Sparkline SVG -->
+<div class="w-full h-14 bg-surface-container-low/90 rounded-lg p-1.5 flex items-end border border-outline-variant/50">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 280 44">
+<defs>
+<lineargradient id="elevGradLight" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4D7C5F" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#4D7C5F" stop-opacity="0.05"></stop>
+</lineargradient>
+</defs>
+<path d="M0,38 Q40,34 70,26 T140,12 T210,24 T280,4 L280,44 L0,44 Z" fill="url(#elevGradLight)"></path>
+<path d="M0,38 Q40,34 70,26 T140,12 T210,24 T280,4" stroke="#2E6F40" stroke-linecap="round" stroke-width="2.2"></path>
+<circle cx="140" cy="12" fill="#2E6F40" r="3.5"></circle>
+<circle cx="280" cy="4" fill="#2E6F40" r="3.5"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Lat: 04°38'12.4" N</span>
+<span>Lon: 75°34'48.1" W</span>
+<span class="text-primary font-mono font-medium">EPSG:3116</span>
+</div>
+</div>
+<!-- Quick Map Camera Controls -->
+<div class="pointer-events-auto flex items-center gap-1 p-1 bg-white/85 backdrop-blur-xl rounded-full shadow-md border border-white/90 self-start">
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Acercar Zoom">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Alejar Zoom">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<div class="h-4 w-px bg-outline-variant"></div>
+<button class="px-2.5 h-8 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center gap-1 transition-colors" title="Vista Perspectiva 3D">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+<span>3D Tilt</span>
+</button>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Restablecer Cámara">
+<span class="material-symbols-outlined text-[17px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Suggested Crossings Visual Legend (Bottom Center) -->
+<div class="absolute bottom-space-md left-1/2 -translate-x-1/2 pointer-events-auto z-20">
+<div class="flex items-center gap-4 px-4 py-2 rounded-full bg-white/90 backdrop-blur-2xl shadow-[0_6px_20px_rgba(26,35,30,0.08)] border border-white/90">
+<div class="flex items-center gap-2">
+<span class="w-3 h-2 rounded bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Ecoducto Recomendado (2)</span>
+</div>
+<div class="h-3 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conflicto Alto Impacto</span>
+</div>
+<div class="h-3 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Reserva Núcleo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT SIDEBAR: SAFARI CHIC LIQUID GLASS CALCULATOR PANEL -->
+<aside class="relative w-[420px] h-full flex flex-col bg-surface-container-lowest/80 backdrop-blur-2xl shadow-[-4px_0_30px_rgba(26,35,30,0.06)] border-l border-white/80 z-40 overflow-hidden">
+<!-- Panel Header -->
+<div class="p-space-md pb-space-sm bg-gradient-to-b from-white/70 to-transparent">
+<div class="flex items-center justify-between mb-1.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            BioMetric v3.4 • Sincronizado
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Traza #ALT-02</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Impacto Ambiental en Vivo</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Diagnóstico multicriterio del tramo B-204 en tiempo real.</p>
+</div>
+<!-- Scrollable Body for Telemetry & Impact Metrics -->
+<div class="flex-1 overflow-y-auto px-space-md space-y-space-md pb-space-lg">
+<!-- Overall Impact Score Dial / Gauge Card -->
+<div class="relative p-space-md rounded-2xl bg-surface-container-variant/75 border border-white/90 shadow-sm overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Índice Global de Afectación</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-[44px] leading-none font-bold text-error" id="scoreValue">68</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">/100</span>
+</div>
+<span class="inline-block mt-1.5 font-label-md text-label-md font-semibold text-error" id="scoreLabel">Impacto Moderado-Alto</span>
+</div>
+<!-- Radial Gauge Display SVG -->
+<div class="relative w-24 h-24 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#DDD8CE" stroke-width="9"></circle>
+<circle class="transition-all duration-700" cx="50" cy="50" fill="transparent" id="scoreProgressCircle" r="40" stroke="#D33F36" stroke-dasharray="251.2" stroke-dashoffset="80.4" stroke-linecap="round" stroke-width="9"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-[22px] text-error">warning</span>
+</div>
+</div>
+</div>
+<!-- Mitigate Simulation Switch Banner inside Score Box -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-white/70 border border-outline-variant/60 p-2.5 rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Mitigar con Ecoductos</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Reduce fragmentación en 30 pts</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="toggleMitigacion" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- 4 Key KPI Metrics Pod Grid -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- KPI 1 -->
+<div class="p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 shadow-xs flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fragmentación</span>
+<span class="material-symbols-outlined text-error text-[16px]">broken_image</span>
+</div>
+<span class="font-headline-md text-headline-md text-error font-bold">+34%</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Riesgo en Corredor Sur</span>
+</div>
+<!-- KPI 2 -->
+<div class="p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 shadow-xs flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pérdida Vegetal</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">forest</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">28.4 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">ha</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Bosque primario y mixto</span>
+</div>
+<!-- KPI 3 -->
+<div class="p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 shadow-xs flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CO₂ Evitado</span>
+<span class="material-symbols-outlined text-primary text-[16px]">energy_savings_leaf</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold">-420 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">t/a</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Por menor distancia</span>
+</div>
+<!-- KPI 4 -->
+<div class="p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 shadow-xs flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conectividad</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">hub</span>
+</div>
+<span class="font-headline-md text-headline-md text-tertiary font-bold">7.2 <span class="text-error font-body-sm font-medium">→ 4.8</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant mt-0.5">Escala 1 al 10</span>
+</div>
+</div>
+<!-- SPECIES AT RISK / IMPACTED BIODIVERSITY SECTION -->
+<div class="space-y-space-sm pt-1">
+<div class="flex items-center justify-between">
+<h3 class="font-label-lg text-label-lg font-semibold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">pets</span>
+              Biodiversidad Interceptada
+            </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">14 Especies</span>
+</div>
+<!-- Biological Tabs (Todas / Fauna / Flora) -->
+<div class="flex items-center p-1 bg-surface-container-variant/70 border border-outline-variant/60 rounded-xl gap-1">
+<button class="bio-tab flex-1 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface text-center transition-colors" id="tabAll">Todas (14)</button>
+<button class="bio-tab active flex-1 py-1.5 rounded-lg bg-white font-label-sm text-label-sm text-primary font-semibold text-center transition-colors shadow-xs" id="tabFauna">Fauna (8)</button>
+<button class="bio-tab flex-1 py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface text-center transition-colors" id="tabFlora">Flora (6)</button>
+</div>
+<!-- SPECIES LIST CONTAINER -->
+<div class="space-y-2.5" id="speciesList">
+<!-- FAUNA ITEM 1: Oso Andino -->
+<div class="fauna-card p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Oso Andino</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Tremarctos ornatus</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-error-container text-error border border-error/20">
+                  EN PELIGRO (EN)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Superposición: <strong class="text-on-surface">4.2 km</strong>
+</span>
+<span class="text-primary font-semibold">Ecoducto sugerido Km 6.2</span>
+</div>
+</div>
+<!-- FAUNA ITEM 2: Puma concolor -->
+<div class="fauna-card p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Puma Concolor</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Puma concolor</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-[#FEF3C7] text-[#B45309] border border-[#FDE68A]">
+                  VULNERABLE (VU)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B45309]"></span>
+                  Pérdida territorio: <strong class="text-on-surface">18 ha</strong>
+</span>
+<span class="text-error font-semibold">Riesgo atropello: Alto</span>
+</div>
+</div>
+<!-- FAUNA ITEM 3: Rana de Cristal -->
+<div class="fauna-card p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Rana de Cristal de Nariz Quillada</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Centrolene buckleyi</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-error-container text-error border border-error/20">
+                  CRÍTICO (CR)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Cruce quebrada: <strong class="text-on-surface">Quebrada Honda</strong>
+</span>
+<span class="text-secondary font-semibold">Puente viaducto exigido</span>
+</div>
+</div>
+<!-- FAUNA ITEM 4: Tucán Andino -->
+<div class="fauna-card p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tucán Andino Piquiplano</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Andigena laminirostris</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">
+                  CASI AMENAZADO (NT)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Perturbación sonora: <strong class="text-on-surface">1.5 km buffer</strong>
+</span>
+<span class="text-on-surface-variant font-medium">Baja densidad sonora</span>
+</div>
+</div>
+<!-- FLORA ITEM 1: Palma de Cera -->
+<div class="flora-card hidden p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Palma de Cera Andina</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Ceroxylon quindiuense</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-error-container text-error border border-error/20">
+                  EN PELIGRO (EN)
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  En traza directa: <strong class="text-on-surface">~42 palmas</strong>
+</span>
+<span class="text-primary font-semibold">Desvío de eje: 45m</span>
+</div>
+</div>
+<!-- FLORA ITEM 2: Orquídea Drácula -->
+<div class="flora-card hidden p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Orquídea Cara de Mono</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Dracula simia</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-secondary/15 text-secondary border border-secondary/25">
+                  MICRO-ENDÉMICA
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Ladera Norte húmeda
+                </span>
+<span class="text-[#B45309] font-semibold">Afectación microclima</span>
+</div>
+</div>
+<!-- FLORA ITEM 3: Bosque de Niebla -->
+<div class="flora-card hidden p-3 rounded-xl bg-surface-container-variant/70 border border-white/80 hover:bg-white transition-all flex flex-col gap-2 shadow-xs">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Bosque de Niebla Primario</span>
+<span class="font-body-sm text-[12px] italic text-on-surface-variant">Estrato maduro alto-andino</span>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[10px] font-bold bg-primary/10 text-primary border border-primary/20">
+                  ECOSISTEMA CLAVE
+                </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Área interceptada: <strong class="text-on-surface">22.1 ha</strong>
+</span>
+<span class="text-error font-semibold">No compensable</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-space-md bg-white/85 backdrop-blur-xl border-t border-white/80 flex flex-col gap-2.5">
+<button class="w-full flex items-center justify-center gap-2.5 py-3 px-space-md rounded-full bg-gradient-to-r from-primary to-secondary text-white font-label-lg text-label-lg font-semibold shadow-[0_4px_16px_rgba(46,111,64,0.28)] hover:brightness-105 active:scale-[0.99] transition-all" id="btnGenerateAlt">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+<span>Generar Alternativa de Menor Impacto</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-space-md rounded-full bg-surface-container-variant hover:bg-surface-container text-on-surface font-label-md text-label-md font-medium border border-outline-variant/60 transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span>Exportar Dictamen Técnico EIA (.GeoJSON / .PDF)</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Ecological Simulation Interactive Behavior
+  (function initBioViaSimulation() {
+    const bufferRange = document.getElementById('bufferRange');
+    const bufferDisplay = document.getElementById('bufferDisplay');
+    const roadBufferZone = document.getElementById('roadBufferZone');
+    const toggleMitigacion = document.getElementById('toggleMitigacion');
+    const scoreValue = document.getElementById('scoreValue');
+    const scoreLabel = document.getElementById('scoreLabel');
+    const scoreProgressCircle = document.getElementById('scoreProgressCircle');
+    const btnGenerateAlt = document.getElementById('btnGenerateAlt');
+
+    // Buffer Slider Interaction
+    if (bufferRange && roadBufferZone && bufferDisplay) {
+      bufferRange.addEventListener('input', (e) => {
+        const val = e.target.value;
+        bufferDisplay.textContent = `${val}m`;
+        // Normalize 100m-1500m to stroke-width 20-80
+        const strokeW = 20 + ((val - 100) / 1400) * 60;
+        roadBufferZone.setAttribute('stroke-width', strokeW);
+      });
+    }
+
+    // Toggle Mitigation Simulation (Score from 68 to 38)
+    if (toggleMitigacion && scoreValue && scoreLabel && scoreProgressCircle) {
+      toggleMitigacion.addEventListener('change', (e) => {
+        if (e.target.checked) {
+          // Mitigated state
+          scoreValue.textContent = '38';
+          scoreValue.className = 'font-display-hero text-[44px] leading-none font-bold text-primary';
+          scoreLabel.textContent = 'Impacto Aceptable (Mitigado)';
+          scoreLabel.className = 'inline-block mt-1.5 font-label-md text-label-md font-semibold text-primary';
+          // 251.2 is full circle circumference; offset for 38% = 251.2 * (1 - 0.38) = 155.7
+          scoreProgressCircle.setAttribute('stroke-dashoffset', '155.7');
+          scoreProgressCircle.setAttribute('stroke', '#2E6F40');
+        } else {
+          // Unmitigated baseline
+          scoreValue.textContent = '68';
+          scoreValue.className = 'font-display-hero text-[44px] leading-none font-bold text-error';
+          scoreLabel.textContent = 'Impacto Moderado-Alto';
+          scoreLabel.className = 'inline-block mt-1.5 font-label-md text-label-md font-semibold text-error';
+          // offset for 68% = 251.2 * (1 - 0.68) = 80.4
+          scoreProgressCircle.setAttribute('stroke-dashoffset', '80.4');
+          scoreProgressCircle.setAttribute('stroke', '#D33F36');
+        }
+      });
+    }
+
+    // Species Tab Switching
+    const tabAll = document.getElementById('tabAll');
+    const tabFauna = document.getElementById('tabFauna');
+    const tabFlora = document.getElementById('tabFlora');
+    const faunaCards = document.querySelectorAll('.fauna-card');
+    const floraCards = document.querySelectorAll('.flora-card');
+
+    function setActiveTab(activeBtn) {
+      [tabAll, tabFauna, tabFlora].forEach(btn => {
+        if (!btn) return;
+        btn.classList.remove('bg-white', 'text-primary', 'font-semibold', 'shadow-xs');
+        btn.classList.add('text-on-surface-variant');
+      });
+      activeBtn.classList.add('bg-white', 'text-primary', 'font-semibold', 'shadow-xs');
+      activeBtn.classList.remove('text-on-surface-variant');
+    }
+
+    if (tabAll) {
+      tabAll.addEventListener('click', () => {
+        setActiveTab(tabAll);
+        faunaCards.forEach(c => c.classList.remove('hidden'));
+        floraCards.forEach(c => c.classList.remove('hidden'));
+      });
+    }
+
+    if (tabFauna) {
+      tabFauna.addEventListener('click', () => {
+        setActiveTab(tabFauna);
+        faunaCards.forEach(c => c.classList.remove('hidden'));
+        floraCards.forEach(c => c.classList.add('hidden'));
+      });
+    }
+
+    if (tabFlora) {
+      tabFlora.addEventListener('click', () => {
+        setActiveTab(tabFlora);
+        faunaCards.forEach(c => c.classList.add('hidden'));
+        floraCards.forEach(c => c.classList.remove('hidden'));
+      });
+    }
+
+    // Generate Alternative Route Micro-Interaction
+    if (btnGenerateAlt) {
+      btnGenerateAlt.addEventListener('click', () => {
+        btnGenerateAlt.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Calculando Corredor Óptimo...</span>';
+        setTimeout(() => {
+          btnGenerateAlt.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Alternativa B-204-Eco Generada</span>';
+          if (toggleMitigacion && !toggleMitigacion.checked) {
+            toggleMitigacion.click();
+          }
+          setTimeout(() => {
+            btnGenerateAlt.innerHTML = '<span class="material-symbols-outlined text-[20px]">auto_fix_high</span><span>Generar Alternativa de Menor Impacto</span>';
+          }, 3000);
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

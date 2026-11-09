@@ -1,0 +1,8 @@
+{
+  "name": "Remix BioVía - Simulación de Impacto Ecológico y Conectividad Vial",
+  "description": "Plataforma geoespacial de simulación de infraestructuras y cálculo de impacto ecológico en tiempo real con datos de biodiversidad GBIF, iNaturalist y lista roja IUCN.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
